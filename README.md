@@ -1,8 +1,26 @@
-# React + Vite
+# Formulario de Registro React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Esta es una web de registro, permite al usuario registrarse a una pagina web al acceder sus datos.
 
-Currently, two official plugins are available:
+## Campos de entrada
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Nombre: Aqui el usuario debe ingresar su nombre.
+- Apellido: Aqui el usuario debe ingresar su apellido.
+- Email: Aqui el usuario debe ingresar su email.
+- Telefono: Aqui el usuario debe ingresar su numero de telefono.
+- Contraseña: Aqui el usuario debe ingresar su contraseña.
+- Confirmar contraseña: Aqui el usuario debe ingresar nuevamente su contraseña para confirmar.
+
+## Instalacion
+
+- Puedes clona o descarga el repositorio desde "https://github.com/matiasvissio13/vissio-registro-clase6.git".
+
+## Tecnologias usadas
+
+- React
+- Tailwind CSS
+- Vite
+
+## Autor
+
+- Matias Vissio
