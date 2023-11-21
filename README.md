@@ -1,6 +1,6 @@
 # Formulario de Registro React
 
-- Esta es una web de registro, permite al usuario registrarse a una pagina web al acceder sus datos.
+- Esta es una web de registro, permite al usuario registrarse a una pagina web al acceder sus datos en los campos de entrada.
 
 ## Campos de entrada
 
