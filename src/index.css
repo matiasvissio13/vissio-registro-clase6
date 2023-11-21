@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(https://i.pinimg.com/originals/28/a4/a0/28a4a05eb0e3abfe2235f30cdbb7fb61.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
