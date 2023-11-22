@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Registro = () => {
+    const [error, setError] = useState(false)
+    const [nombre, setNombre] = useState('')
+    const [apellido, setApellido] = useState('')
+    const [email, setEmail] = useState('')
+    const [telefono, setTelefono] = useState('')
+    const [contraseña, setContraseña] = useState('')
+    const [ccontraseña, setCContraseña] = useState('')
 
     const handleSubmit = e => {
         e.preventDefault()
-        console.log("hola muindo!")
+
+        if(nombre.trim() == '' || apellido.trim() == '' || email.trim() == '' || telefono.trim() == '' || contraseña.trim() == '' || ccontraseña.trim() == '') {
+            setError(true)
+        } else {
+            setError(false)
+        }
     }
+
 
     return (
         <section className='flex px-4 min-w-[425px] md:w-[640px] lg:px-0'>
@@ -15,33 +28,47 @@ const Registro = () => {
                 <div className='block sm:flex gap-5 w-full'>
                     <div className='flex flex-col pt-3 w-full'>
                         <label htmlFor="nombre" className='text-gray-900'>Nombre</label>
-                        <input type="text" name="" id="nombre" className='p-1 rounded-md shadow' />
+                        <input onChange={(e) => setNombre(e.target.value)}
+                            value={nombre} type="text" name="" id="nombre"
+                            className='p-1 rounded-md shadow' />
                     </div>
                     <div className='flex flex-col pt-3 w-full'>
                         <label htmlFor="apellido" className='text-gray-900'>Apellido</label>
-                        <input type="text" name="" id="apellido" className='p-1 rounded-md shadow' />
+                        <input onChange={(e) => setApellido(e.target.value)}
+                            value={apellido} type="text" name="" id="apellido"
+                            className='p-1 rounded-md shadow' />
                     </div>
                 </div>
                 <div className='flex flex-col w-full'>
                     <div className='flex flex-col pt-3 w-full'>
                         <label htmlFor="email" className='text-gray-900'>Email</label>
-                        <input type="email" name="" id="email" className='p-1 rounded-md shadow' />
+                        <input onChange={(e) => setEmail(e.target.value)}
+                            value={email} type="email" name="" id="email"
+                            className='p-1 rounded-md shadow' />
                     </div>
                     <div className='flex flex-col pt-3 w-full'>
                         <label htmlFor="telefono" className='text-gray-900'>Telefono</label>
-                        <input type="number" name="" id="telefono" className='p-1 rounded-md shadow' />
+                        <input onChange={(e) => setTelefono(e.target.value)}
+                            value={telefono} type="number" name="" id="telefono"
+                            className='p-1 rounded-md shadow' />
                     </div>
                 </div>
                 <div className='block sm:flex gap-5 w-full'>
                     <div className='flex flex-col pt-3 w-full'>
                         <label htmlFor="contraseña" className='text-gray-900'>Contraseña</label>
-                        <input type="password" name="" id="contraseña" className='p-1 rounded-md shadow' />
+                        <input onChange={(e) => setContraseña(e.target.value)}
+                            value={contraseña} type="password" name="" id="contraseña"
+                            className='p-1 rounded-md shadow' />
                     </div>
                     <div className='flex flex-col pt-3 w-full'>
                         <label htmlFor="segunda-contaseña" className='text-gray-900'>Confirmar contraseña</label>
-                        <input type="password" name="" id="segunda-contaseña" className='p-1 rounded-md shadow' />
+                        <input onChange={(e) => setCContraseña(e.target.value)}
+                            value={ccontraseña} type="password" name="" id="segunda-contaseña"
+                            className='p-1 rounded-md shadow' />
                     </div>
                 </div>
+
+                {error && <p className='h-5 mt-5 font-mono text-red-600'>Por favor, completa todos los campos.</p>}
 
                 <button className='bg-blue-600 hover:bg-blue-500 w-[150px] shadow transition-all duration-200 p-2 uppercase text-white rounded mt-10'>Registrarse</button>
             </form>
